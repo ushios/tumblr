@@ -17,6 +17,7 @@ tumblr extensions.
     
     $reblogger = new Reblogger();
     $client = new Tumblr\API\Client(CONSUMER_KEY, CONSUMER_SECRET);
+    $client->setToken(TOKEN, TOKEN_SECRET);
     $reblogger->setClient($client);
     
     $strategy = new AllReblogStrategy(); // or ReblogStrategyInterface sub class.
