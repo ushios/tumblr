@@ -2,3 +2,26 @@ tumblr
 ======
 
 tumblr extensions.
+
+---
+
+# Usage
+
+## Reblogger
+
+    # reblogger.php
+    
+    <?php
+    use Ushios\Component\Tumblr\Reblog\Reblogger;
+    use Ushios\Component\Tumblr\Reblog\Strategy\AllReblogStrategy;
+    
+    $reblogger = new Reblogger();
+    $client = new Tumblr\API\Client(CONSUMER_KEY, CONSUMER_SECRET);
+    $reblogger->setClient($client);
+    
+    $strategy = new AllReblogStrategy(); // or ReblogStrategyInterface sub class.
+    $reblogger->setReblogStrategy($strategy);
+    
+    $reblogger->reblog(BLOG_NAME, $post); // reblog post
+
+---
