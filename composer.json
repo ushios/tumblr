@@ -17,6 +17,9 @@
         "php": ">=5.3.2",
         "tumblr/tumblr": "0.1.*"
     },
+    "suggest": {
+        "doctrine/cache": "Cache post history in any reblog strategies."
+    },
     "autoload": {
         "psr-0": {
             "Ushios\\Component\\Tumblr": ""

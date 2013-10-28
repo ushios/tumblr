@@ -64,7 +64,7 @@ abstract class AbstractReblogger implements RebloggerInterface
      * 
      * @return array the response array
      */
-    protected function reblogPost($blogName, array $post, array $options)
+    protected function reblogPost($blogName, array $post, array $options = null)
     {
         $id = $post['id'];
         $reblogKey = $post['reblog_key'];
