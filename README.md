@@ -23,6 +23,6 @@ tumblr extensions.
     $strategy = new AllReblogStrategy(); // or ReblogStrategyInterface sub class.
     $reblogger->setReblogStrategy($strategy);
     
-    $reblogger->reblog(BLOG_NAME, $post); // reblog post
+    $reblogger->reblog(BLOG_NAME, (array)$post); // reblog post
 
 ---
