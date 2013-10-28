@@ -4,6 +4,9 @@ tumblr
 tumblr extensions.
 
 ---
+# Dependencies
+
+- [tumblr/tumblr](https://github.com/tumblr/tumblr.php)
 
 # Usage
 
