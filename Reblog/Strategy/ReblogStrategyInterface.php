@@ -11,7 +11,7 @@ interface ReblogStrategyInterface
     /**
      * Judge the post reblog or not.
      * 
-     * @param array $post The tumblr post.
+     * @param object $post The tumblr post.
      */
-    public function canReblog(array $post);
+    public function canReblog($post);
 }

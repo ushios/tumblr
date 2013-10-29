@@ -25,7 +25,7 @@ class IgnoreDuplicateReblogStrategy extends AbstractReblogStrategy
     /**
      * {@inheritdoc}
      */
-    public function canReblog(array $post)
+    public function canReblog($post)
     {
         $cacheKey = $this->makeCacheKey($post);
         $cached = $this->cache->fetch($cacheKey);
@@ -57,12 +57,12 @@ class IgnoreDuplicateReblogStrategy extends AbstractReblogStrategy
     
     /**
      * Make cache key.
-     * @param array $post
+     * @param object $post
      * @return string
      */
-    protected function makeCacheKey(array $post)
+    protected function makeCacheKey($post)
     {
-        $reblogKey = $post['reblog_key'];
+        $reblogKey = $post->reblog_key;
         return get_class($this) . $reblogKey;
     }
 }

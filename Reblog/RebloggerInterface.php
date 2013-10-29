@@ -31,10 +31,10 @@ interface RebloggerInterface
      * Reblog the post.
      * 
      * @param string $blogName The blog name was posted this method.
-     * @param array $post The tumblr post array.
+     * @param object $post The tumblr post array.
      * @param array $options Reblog options.
      * 
      * @return array|false the response array
      */
-    public function reblog($blogName, array $post, array $options = null);
+    public function reblog($blogName, $post, array $options = null);
 }

@@ -43,7 +43,7 @@ abstract class AbstractReblogger implements RebloggerInterface
     /**
      * {@inheritdoc}
      */
-    public function reblog($blogName, array $post, array $options = null)
+    public function reblog($blogName, $post, array $options = null)
     {
         if ($this->reblogStrategy){
             if ($this->reblogStrategy->canReblog($post)){
@@ -60,14 +60,14 @@ abstract class AbstractReblogger implements RebloggerInterface
      * Reblog the post from post array.
      * 
      * @param string $blogName
-     * @param array $post
+     * @param object $post
      * 
      * @return array the response array
      */
-    protected function reblogPost($blogName, array $post, array $options = null)
+    protected function reblogPost($blogName, $post, array $options = null)
     {
-        $id = $post['id'];
-        $reblogKey = $post['reblog_key'];
+        $id = $post->id;
+        $reblogKey = $post->reblog_key;
         
         return $this->client->reblogPost($blogName, $id, $reblogKey, $options);
     }
